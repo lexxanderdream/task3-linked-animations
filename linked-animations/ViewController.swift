@@ -91,8 +91,9 @@ class ViewController: UIViewController {
             case .ended:
                 animator.startAnimation()
                 
-                // Calculate duration
+                // Move slider with duration
                 let duration = animator.duration - animator.duration * animator.fractionComplete
+                
                 UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear]) {
                     slider.setValue(1, animated: true)
                 }
